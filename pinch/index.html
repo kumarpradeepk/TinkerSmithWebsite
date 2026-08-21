@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>pinch — sodium tracker &amp; salt coach · tinkersmithstudio</title>
+<meta name="description" content="pinch turns your whole salt day into one simple number — a budget ring with a tiny salt-shaker coach who flags what won't fit before you bite. free, no account, on-device.">
+<link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../pinchicon.css"><link rel="stylesheet" href="pinch.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script></head>
+<body>
+<nav id="pnav"><a class="lock" href="../index.html"><svg class="mark" viewBox="0 0 64 64" fill="currentColor"><path d="M10 15a2 2 0 0 1 2-2h29.2a3 3 0 0 1 2 .77l8.1 7.28a3 3 0 0 1 0 4.46l-8.1 7.28a3 3 0 0 1-2 .77H12a2 2 0 0 1-2-2z"></path><rect x="21" y="35" width="10" height="18" rx="2.5"></rect><path d="M55.5 3.5c.5 2.6 1.4 3.5 4 4-2.6.5-3.5 1.4-4 4-.5-2.6-1.4-3.5-4-4 2.6-.5 3.5-1.4 4-4Z"></path></svg><span class="wm">tinkersmith<em>studio</em></span><span class="crumb">/ pinch</span></a>
+<div class="links"><a href="privacy.html">privacy</a><a href="terms.html">terms</a></div>
+<a class="btn btn-brine btn-sm" href="#policies">app store links <span class="ic">↓</span></a></nav>
+
+<header class="phero">
+<canvas id="saltfall"></canvas>
+<div class="brinehaze"></div>
+<div class="float-bit" data-depth="-0.22" style="top:17%;left:8%"><span class="crys"></span></div>
+<div class="float-bit" data-depth="-0.12" style="top:66%;left:12%"><span class="grains3"><i></i><i></i><i></i></span></div>
+<div class="float-bit" data-depth="-0.3" style="top:22%;right:9%"><span class="ringbit"></span></div>
+<div class="float-bit" data-depth="-0.16" style="top:72%;right:17%"><span class="crys sm"></span></div>
+<div class="phero-inner">
+<div class="phero-copy">
+<p class="kick rise" style="--i:0">✦ fresh from the tinkersmith forge</p>
+<span class="pinchicon xl rise" style="--i:1;margin:18px 0 6px" role="img" aria-label="pinch icon — a happy salt shaker that wiggles and sprinkles"><svg viewBox="0 0 120 120"><g class="pn-fallgrains"><circle class="pn-fg f1" cx="97" cy="34" r="2.6"></circle><rect class="pn-fg f2" x="90" y="54" width="5" height="5" rx="1.2" transform="rotate(45 92.5 56.5)"></rect><circle class="pn-fg f3" cx="101" cy="70" r="2.2"></circle></g><g class="pn-mascot"><clipPath id="pnBody"><rect x="39" y="46" width="42" height="56" rx="17"></rect></clipPath><rect x="39" y="46" width="42" height="56" rx="17" class="pn-body"></rect><rect x="35" y="77" width="50" height="30" class="pn-salt" clip-path="url(#pnBody)"></rect><rect x="53" y="82" width="7" height="7" rx="1.6" transform="rotate(45 56.5 85.5)" class="pn-saltbit"></rect><rect x="45" y="16" width="30" height="19" rx="9" class="pn-cap"></rect><rect x="38" y="33" width="44" height="9" rx="4.5" class="pn-collar"></rect><circle cx="52" cy="25" r="2.2" class="pn-hole"></circle><circle cx="60" cy="23.5" r="2.2" class="pn-hole"></circle><circle cx="68" cy="25" r="2.2" class="pn-hole"></circle><g class="pn-eyes"><ellipse cx="51" cy="68" rx="3.4" ry="4.3" class="pn-eye"></ellipse><circle cx="49.7" cy="66.2" r="1.3" class="pn-glint"></circle><ellipse cx="69" cy="68" rx="3.4" ry="4.3" class="pn-eye"></ellipse><circle cx="67.7" cy="66.2" r="1.3" class="pn-glint"></circle></g><circle cx="43.5" cy="75" r="3.5" class="pn-cheek"></circle><circle cx="76.5" cy="75" r="3.5" class="pn-cheek"></circle><path d="M52 78 Q60 86 68 78" class="pn-smile"></path></g></svg><i class="pn-spark">✧</i></span>
+<h1 class="rise" style="--i:1"><em>pinch</em></h1>
+<p class="ptag rise" style="--i:2">the easy way to eat less salt.</p>
+<p class="psub rise" style="--i:3">a sodium tracker with a tiny salt coach — your whole day becomes one number, and pinch rides the budget ring, flags what won't fit <b>before you bite</b>, and cheers every streak. <b>free &amp; private:</b> no account, no cloud, your food log never leaves the phone.</p>
+<div class="pcta rise" style="--i:4"><a class="btn btn-brine btn-lg" href="#" aria-disabled="true">app store — soon <span class="ic">↗</span></a></div>
+<p class="hint rise" style="--i:5">→ try it: log the day on the phone — keep pinch under budget</p>
+</div>
+<div class="phone-wrap rise" data-depth="-0.05" style="--i:3">
+<div class="pphone"><div class="pscreen" id="pscreen">
+<div class="statusbar"><span>9:41</span><span class="sdots">●●●</span></div>
+<div class="phead"><div><p class="pday">tuesday, aug 11</p><h4 id="ptitle">today</h4></div><span class="streak">✦ 14-day streak</span></div>
+<div class="ringwrap">
+<svg viewBox="0 0 140 140" class="pring">
+<circle cx="70" cy="70" r="56" class="pring-dots"></circle>
+<circle cx="70" cy="70" r="56" class="pring-bg"></circle>
+<circle cx="70" cy="70" r="56" class="pring-fg" id="pringfg" transform="rotate(-90 70 70)"></circle>
+<g id="pmasc" style="transform:translate(70px,14px)">
+<circle cx="0" cy="2" r="15" class="pm-halo"></circle>
+<clipPath id="pmClip"><rect x="-8.5" y="-5" width="17" height="23" rx="7"></rect></clipPath>
+<rect x="-8.5" y="-5" width="17" height="23" rx="7" class="pm-body"></rect>
+<rect x="-11" y="18" width="22" height="26" class="pm-salt" id="pmsalt" clip-path="url(#pmClip)"></rect>
+<rect x="-6.5" y="-15.5" width="13" height="8.5" rx="4" class="pm-cap"></rect>
+<rect x="-9" y="-8.5" width="18" height="4" rx="2" class="pm-collar"></rect>
+<circle cx="-3.6" cy="3.5" r="1.7" class="pm-eye"></circle>
+<circle cx="3.6" cy="3.5" r="1.7" class="pm-eye"></circle>
+<circle cx="-6.8" cy="7" r="1.9" class="pm-cheek"></circle>
+<circle cx="6.8" cy="7" r="1.9" class="pm-cheek"></circle>
+<path id="pmouth" d="M-3.6 8.5 Q0 12 3.6 8.5" class="pm-mouth"></path>
+</g>
+</svg>
+<div class="ringtxt"><b id="pcons">0</b><span>of 1,500 mg</span><i id="pleft">1,500 mg left</i></div>
+</div>
+<div class="pbubble"><span class="tail"></span><span id="pcoach">1,500 mg to spend today — log the day, i'll keep count.</span></div>
+<p class="slot-label">usual suspects · tap to log</p>
+<div class="food" data-mg="65"><span class="fpip" style="background:#D1604A"></span><div class="ftxt"><b>greek yogurt</b><span>¾ cup · breakfast</span></div><span class="fmg">+65</span><span class="flag">won't fit</span><button class="fadd" aria-label="log greek yogurt"></button></div>
+<div class="food" data-mg="430"><span class="fpip" style="background:#D1604A"></span><div class="ftxt"><b>plain bagel</b><span>1 whole · breakfast</span></div><span class="fmg">+430</span><span class="flag">won't fit</span><button class="fadd" aria-label="log plain bagel"></button></div>
+<div class="food" data-mg="96"><span class="fpip" style="background:#4F8DCC"></span><div class="ftxt"><b>iced oat latte</b><span>16 oz · lunch</span></div><span class="fmg">+96</span><span class="flag">won't fit</span><button class="fadd" aria-label="log iced oat latte"></button></div>
+<div class="food" data-mg="610"><span class="fpip" style="background:#3D9C85"></span><div class="ftxt"><b>chicken salad wrap</b><span>1 wrap · dinner</span></div><span class="fmg">+610</span><span class="flag">won't fit</span><button class="fadd" aria-label="log chicken salad wrap"></button></div>
+<div class="food" data-mg="1560"><span class="fpip" style="background:#E5B54B"></span><div class="ftxt"><b>instant ramen</b><span>1 cup · anytime</span></div><span class="fmg">+1,560</span><span class="flag">won't fit</span><button class="fadd" aria-label="log instant ramen"></button></div>
+<div class="dock"><i data-lucide="gauge" class="dic on"></i><i data-lucide="chart-column" class="dic"></i><span class="fab"><i data-lucide="plus"></i></span><i data-lucide="award" class="dic"></i><i data-lucide="settings-2" class="dic"></i></div>
+<div id="confetti"></div>
+</div></div>
+<div class="phone-glow"></div>
+</div>
+</div></header>
+
+<section class="pfeat">
+<div class="fitem" data-reveal style="--d:0s"><i data-lucide="eye"></i><b>know before you bite</b><p>pinch checks every usual suspect against what's left of today and stamps what won't fit — before it hits your plate.</p></div>
+<div class="fitem" data-reveal style="--d:.1s"><i data-lucide="gauge"></i><b>one number a day</b><p>no calorie-app maze. a single budget ring, filled by your meals — pinch rides the arc so you feel the pace.</p></div>
+<div class="fitem" data-reveal style="--d:.2s"><i data-lucide="zap"></i><b>three-second logging</b><p>your usual foods live one tap away. log breakfast before the kettle boils.</p></div>
+<div class="fitem" data-reveal style="--d:.3s"><i data-lucide="flame"></i><b>streaks, not guilt</b><p>days under budget add up to streaks; gentle check-ins at breakfast, lunch and dinner — that's it.</p></div>
+</section>
+
+<section class="pstamp" id="bite">
+<div class="stcopy" data-reveal><p class="kick">the party trick</p><h2>know <em>before</em> you bite.</h2><p class="stsub">every food shows its cost against what's left of today. the moment something blows the budget, pinch stamps it — no maths, no guessing, no 9 pm surprise.</p><p class="stmath">1,500 budget − 1,201 logged = <b>299 to spare</b></p></div>
+<div class="stampcard" data-reveal style="--d:.15s"><span class="stname">instant ramen</span><span class="stmg">+1,560 mg</span><span class="wontfit">won't fit</span></div>
+</section>
+
+<section class="ppol" id="policies">
+<div class="sec-head" data-reveal><p class="kick">the paperwork · app store connect links</p><h2>crisp, human, linkable</h2></div>
+<div class="polgrid">
+<a class="polcard" data-reveal style="--d:0s" href="privacy.html"><i data-lucide="shield-check"></i><b>privacy policy</b><p>what stays on your phone (everything — there's no server to send it to) and the zero third-party SDKs that see your food log.</p><span class="go">privacy.html <span class="ic">→</span></span></a>
+<a class="polcard" data-reveal style="--d:.12s" href="terms.html"><i data-lucide="scroll-text"></i><b>terms of use</b><p>the free-and-simple deal, why sodium numbers are estimates, and the not-medical-advice part.</p><span class="go">terms.html <span class="ic">→</span></span></a>
+</div></section>
+
+<footer class="pfoot"><p class="disc">pinch helps you build easier salt habits — it isn't medical advice. sodium targets vary; follow your clinician's guidance.</p>
+<a class="back" href="../index.html">← forged by tinkersmith<em>studio</em></a></footer>
+<script src="pinch.js"></script></body></html>

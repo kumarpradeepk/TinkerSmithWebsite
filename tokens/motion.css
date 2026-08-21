@@ -1,0 +1,6 @@
+:root{
+--ease-strike:cubic-bezier(.34,1.56,.64,1);/* @kind other */
+--ease-glide:cubic-bezier(.22,1,.36,1);/* @kind other */
+--ease-smooth:cubic-bezier(.65,0,.35,1);/* @kind other */
+--dur-1:120ms;/* @kind other */--dur-2:240ms;/* @kind other */--dur-3:480ms;/* @kind other */--dur-4:900ms;/* @kind other */
+}

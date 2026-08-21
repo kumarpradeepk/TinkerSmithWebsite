@@ -1,0 +1,10 @@
+:root{
+--font-display:'Bricolage Grotesque',system-ui,sans-serif;
+--font-body:'Archivo',system-ui,sans-serif;
+--font-mono:'IBM Plex Mono',ui-monospace,monospace;
+--text-xs:12px;--text-sm:13px;--text-base:15px;--text-md:17px;--text-lg:20px;--text-xl:24px;--text-2xl:32px;--text-3xl:44px;--text-4xl:64px;
+--display-hero:clamp(64px,10vw,148px);/* @kind font */
+--leading-tight:1.02;--leading-snug:1.25;--leading-normal:1.55;
+--tracking-tight:-0.02em;--tracking-wide:0.14em;
+--weight-regular:400;--weight-medium:500;--weight-semibold:600;--weight-bold:700;--weight-black:800;
+}

@@ -1,0 +1,34 @@
+/* pinch animated app icon — a happy salt shaker; it wiggles, blinks and sprinkles */
+.pinchicon{position:relative;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#1A2C42,#0B1523);border:1px solid rgba(127,179,232,.32);border-radius:24%;flex:none;animation:pn-glow 3.4s var(--ease-smooth) infinite alternate}
+.pinchicon svg{width:88%;height:88%;overflow:visible}
+.pinchicon.xl{width:128px;height:128px}
+.pinchicon.lg{width:88px;height:88px}
+.pinchicon.sm{width:38px;height:38px;border-width:1px}
+/* mascot */
+.pn-mascot{transform-origin:60px 102px;animation:pn-shake 5.5s var(--ease-strike) infinite}
+.pn-body{fill:#F4EFE4}
+.pn-salt{fill:#CFE0F0}
+.pn-saltbit{fill:#EAF4FF;opacity:.9}
+.pn-cap{fill:#2F76BE}
+.pn-collar{fill:#245E9C}
+.pn-hole{fill:rgba(255,255,255,.85)}
+.pn-eyes{transform-box:fill-box;transform-origin:center;animation:pn-blink 4.4s ease-in-out infinite}
+.pn-eye{fill:#16293F}
+.pn-glint{fill:#fff;opacity:.9}
+.pn-cheek{fill:#F3C8C2;opacity:.85}
+.pn-smile{fill:none;stroke:#16293F;stroke-width:3;stroke-linecap:round}
+/* grains that sprinkle down the side */
+.pn-fg{fill:#EAF4FF;opacity:0;animation:pn-fall 2.6s linear infinite}
+.pn-fg.f2{animation-delay:.9s}
+.pn-fg.f3{animation-delay:1.7s}
+/* crystal spark */
+.pn-spark{position:absolute;top:-9%;right:-9%;font-style:normal;color:#EAF4FF;text-shadow:0 0 12px rgba(127,179,232,.95);animation:pn-twinkle 2s ease-in-out infinite;line-height:1}
+.pinchicon.xl .pn-spark{font-size:26px}
+.pinchicon.lg .pn-spark{font-size:18px}
+.pinchicon.sm .pn-spark{font-size:10px}
+@keyframes pn-glow{from{box-shadow:0 0 24px -8px rgba(79,141,204,.45),inset 0 0 18px rgba(79,141,204,.08)}to{box-shadow:0 0 46px -4px rgba(79,141,204,.72),inset 0 0 28px rgba(79,141,204,.16)}}
+@keyframes pn-shake{0%,70%,100%{transform:rotate(0)}74%{transform:rotate(-8deg)}78%{transform:rotate(6deg)}82%{transform:rotate(-4deg)}86%{transform:rotate(2.5deg)}90%{transform:rotate(0)}}
+@keyframes pn-blink{0%,90%,100%{transform:scaleY(1)}93%,96%{transform:scaleY(.08)}}
+@keyframes pn-fall{0%{opacity:0;transform:translateY(-14px)}12%{opacity:.9}70%{opacity:.7}100%{opacity:0;transform:translateY(26px)}}
+@keyframes pn-twinkle{0%,100%{opacity:.4;transform:scale(.82) rotate(-10deg)}50%{opacity:1;transform:scale(1.15) rotate(10deg)}}
+@media (prefers-reduced-motion:reduce){.pinchicon,.pn-mascot,.pn-eyes,.pn-fg,.pn-spark{animation:none!important}.pn-fg{opacity:.7}}

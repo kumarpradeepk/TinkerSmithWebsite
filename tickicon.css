@@ -1,0 +1,27 @@
+/* meditick animated app icon — a clock whose hand is a pill; it ticks */
+.tickicon{position:relative;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#1B3427,#0C1912);border:1px solid rgba(123,224,168,.32);border-radius:24%;flex:none;animation:tk-glow 3.2s var(--ease-smooth) infinite alternate}
+.tickicon svg{width:84%;height:84%}
+.tickicon.xl{width:128px;height:128px}
+.tickicon.lg{width:88px;height:88px}
+.tickicon.sm{width:38px;height:38px;border-width:1px}
+.tk-face{fill:rgba(88,196,138,.05);stroke:rgba(123,224,168,.22);stroke-width:2}
+.tk-ticks{stroke:rgba(123,224,168,.35);stroke-width:2.5;stroke-linecap:round}
+.tk-ticks-main{stroke:#7BE0A8;stroke-width:3.5;stroke-linecap:round}
+.tk-hand{transform-origin:60px 60px;animation:tk-tick 12s var(--ease-strike) infinite}
+.tk-pill-b{fill:#EFE9DF}
+.tk-pill-t{fill:#58C48A}
+.tk-seam{stroke:rgba(8,17,12,.6);stroke-width:1.5}
+.tk-orbit{transform-origin:60px 60px;animation:tk-orbit 6s linear infinite}
+.tk-orbit circle{fill:#FFD24A;filter:drop-shadow(0 0 4px rgba(255,210,74,.9))}
+.tk-hub{fill:#58C48A}
+.tk-hub-dot{fill:#08110C}
+.tk-spark{position:absolute;top:-9%;right:-9%;font-style:normal;color:#FFD24A;text-shadow:0 0 12px rgba(255,210,74,.85);animation:tk-twinkle 1.8s ease-in-out infinite;line-height:1}
+.tickicon.xl .tk-spark{font-size:26px}
+.tickicon.lg .tk-spark{font-size:18px}
+.tickicon.sm .tk-spark{font-size:10px}
+@keyframes tk-glow{from{box-shadow:0 0 24px -8px rgba(88,196,138,.4),inset 0 0 18px rgba(88,196,138,.08)}to{box-shadow:0 0 46px -4px rgba(88,196,138,.65),inset 0 0 28px rgba(88,196,138,.16)}}
+@keyframes tk-squash{0%,12%,100%{transform:none}3%{transform:scale(.965,1.02) translateY(2px)}7%{transform:scale(1.012,.988)}}
+@keyframes tk-orbit{to{transform:rotate(360deg)}}
+@keyframes tk-twinkle{0%,100%{opacity:.45;transform:scale(.82) rotate(-8deg)}50%{opacity:1;transform:scale(1.15) rotate(8deg)}}
+@keyframes tk-tick{0%{transform:rotate(0deg)}7.3%{transform:rotate(0deg)}8.33%{transform:rotate(30deg)}15.6%{transform:rotate(30deg)}16.66%{transform:rotate(60deg)}24%{transform:rotate(60deg)}25%{transform:rotate(90deg)}32.3%{transform:rotate(90deg)}33.33%{transform:rotate(120deg)}40.6%{transform:rotate(120deg)}41.66%{transform:rotate(150deg)}49%{transform:rotate(150deg)}50%{transform:rotate(180deg)}57.3%{transform:rotate(180deg)}58.33%{transform:rotate(210deg)}65.6%{transform:rotate(210deg)}66.66%{transform:rotate(240deg)}74%{transform:rotate(240deg)}75%{transform:rotate(270deg)}82.3%{transform:rotate(270deg)}83.33%{transform:rotate(300deg)}90.6%{transform:rotate(300deg)}91.66%{transform:rotate(330deg)}99%{transform:rotate(330deg)}100%{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.tickicon,.tk-hand,.tk-orbit,.tk-spark{animation:none!important}.tk-hand{transform:rotate(300deg)}}

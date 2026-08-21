@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>tinkersmithstudio — a workshop for mobile apps</title>
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="landing.css"><link rel="stylesheet" href="tickicon.css"><link rel="stylesheet" href="pinchicon.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script></head>
+<body>
+<nav id="nav"><a class="lock" href="#top"><svg class="mark" viewBox="0 0 64 64" fill="currentColor"><path d="M10 15a2 2 0 0 1 2-2h29.2a3 3 0 0 1 2 .77l8.1 7.28a3 3 0 0 1 0 4.46l-8.1 7.28a3 3 0 0 1-2 .77H12a2 2 0 0 1-2-2z"></path><rect x="21" y="35" width="10" height="18" rx="2.5"></rect><path d="M55.5 3.5c.5 2.6 1.4 3.5 4 4-2.6.5-3.5 1.4-4 4-.5-2.6-1.4-3.5-4-4 2.6-.5 3.5-1.4 4-4Z"></path></svg><span class="wm">tinkersmith<em>studio</em></span></a>
+<div class="links"><a href="#workbench">workbench</a><a href="#process">process</a><a href="#manifesto">manifesto</a></div>
+<a class="btn btn-primary btn-sm" href="#hello">say hello <span class="ic">↗</span></a></nav>
+
+<header class="hero" id="top">
+<canvas id="embers"></canvas>
+<div class="hero-glow"></div>
+<div class="px" data-depth="-0.28" style="top:16%;left:9%"><i data-lucide="cog" class="glyph spin" style="width:110px;height:110px"></i></div>
+<div class="px" data-depth="-0.16" style="top:63%;left:5%"><i data-lucide="wrench" class="glyph" style="width:56px;height:56px;transform:rotate(-24deg)"></i></div>
+<div class="px" data-depth="-0.36" style="top:20%;right:8%"><i data-lucide="hammer" class="glyph" style="width:88px;height:88px;transform:rotate(18deg)"></i></div>
+<div class="px" data-depth="-0.1" style="top:70%;right:13%"><i data-lucide="ruler" class="glyph" style="width:48px;height:48px;transform:rotate(40deg)"></i></div>
+<div class="px" data-depth="-0.22" style="top:44%;right:24%"><div class="hex"></div></div>
+<div class="px" data-depth="-0.14" style="top:32%;left:24%"><div class="hex sm"></div></div>
+<div class="hero-inner">
+<p class="kicker rise" style="--i:0">✦ a workshop for mobile apps · est. 2026</p>
+<h1 class="giant"><span class="line outline" aria-label="tinker"><span class="L" style="--i:1">t</span><span class="L" style="--i:2">i</span><span class="L" style="--i:3">n</span><span class="L" style="--i:4">k</span><span class="L" style="--i:5">e</span><span class="L" style="--i:6">r</span></span>
+<span class="line solid" aria-label="smith"><span class="L" style="--i:5">s</span><span class="L" style="--i:6">m</span><span class="L" style="--i:7">i</span><span class="L" style="--i:8">t</span><span class="L" style="--i:9">h</span><span class="stamp rise" style="--i:11">studio</span></span></h1>
+<p class="tag rise" style="--i:10">we tinker past breaking points and smith apps that feel hand-made.<br>small team. hot forge. <b>your pocket.</b></p>
+<div class="cta rise" style="--i:12"><a class="btn btn-primary btn-lg" href="#workbench">see the workbench <span class="ic">↓</span></a><a class="btn btn-secondary btn-lg" href="#process">our process</a></div>
+</div>
+<div class="scroll-cue rise" style="--i:14"><span></span></div>
+</header>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"><span>built by hand ✦ shipped with fire ✦ ios + android ✦ no fluff, all forge ✦ hammers still warm ✦ </span><span>built by hand ✦ shipped with fire ✦ ios + android ✦ no fluff, all forge ✦ hammers still warm ✦ </span></div></div>
+
+<section class="sec" id="workbench">
+<div class="sec-head" data-reveal><p class="kicker">01 · the workbench</p><h2>fresh off the anvil</h2><p class="note">tap a card → opens its app page (policies inside)</p></div>
+<div class="apps duo">
+<article class="app tilt" data-reveal data-href="pinch/index.html" style="--d:0s"><div class="app-shine"></div>
+<div class="phone"><div class="screen sc-ocean"><span class="notch"></span><span class="pinchicon lg" role="img" aria-label="pinch icon — a happy salt shaker"><svg viewBox="0 0 120 120"><g class="pn-fallgrains"><circle class="pn-fg f1" cx="97" cy="34" r="2.6"></circle><rect class="pn-fg f2" x="90" y="54" width="5" height="5" rx="1.2" transform="rotate(45 92.5 56.5)"></rect><circle class="pn-fg f3" cx="101" cy="70" r="2.2"></circle></g><g class="pn-mascot"><clipPath id="pnBodyCard"><rect x="39" y="46" width="42" height="56" rx="17"></rect></clipPath><rect x="39" y="46" width="42" height="56" rx="17" class="pn-body"></rect><rect x="35" y="77" width="50" height="30" class="pn-salt" clip-path="url(#pnBodyCard)"></rect><rect x="53" y="82" width="7" height="7" rx="1.6" transform="rotate(45 56.5 85.5)" class="pn-saltbit"></rect><rect x="45" y="16" width="30" height="19" rx="9" class="pn-cap"></rect><rect x="38" y="33" width="44" height="9" rx="4.5" class="pn-collar"></rect><circle cx="52" cy="25" r="2.2" class="pn-hole"></circle><circle cx="60" cy="23.5" r="2.2" class="pn-hole"></circle><circle cx="68" cy="25" r="2.2" class="pn-hole"></circle><g class="pn-eyes"><ellipse cx="51" cy="68" rx="3.4" ry="4.3" class="pn-eye"></ellipse><circle cx="49.7" cy="66.2" r="1.3" class="pn-glint"></circle><ellipse cx="69" cy="68" rx="3.4" ry="4.3" class="pn-eye"></ellipse><circle cx="67.7" cy="66.2" r="1.3" class="pn-glint"></circle></g><circle cx="43.5" cy="75" r="3.5" class="pn-cheek"></circle><circle cx="76.5" cy="75" r="3.5" class="pn-cheek"></circle><path d="M52 78 Q60 86 68 78" class="pn-smile"></path></g></svg><i class="pn-spark">✧</i></span><b class="scr-name">pinch</b><span class="bar" style="width:66%"></span><span class="bar" style="width:48%"></span><span class="bar" style="width:58%"></span></div></div>
+<div class="app-meta"><h3>pinch</h3><p>a sodium tracker with a tiny salt coach — your day becomes one number, and pinch flags what won't fit before you bite.</p><div class="chips"><span class="badge b-spark">● fresh pour</span><span class="badge b-steel">ios</span><span class="badge b-steel">free</span></div><a class="applink" href="pinch/index.html">open the app page <span class="ic">→</span></a></div></article>
+<article class="app tilt" data-reveal data-href="meditick/index.html" style="--d:.12s"><div class="app-shine"></div>
+<div class="phone"><div class="screen sc-forest"><span class="notch"></span><span class="tickicon lg" role="img" aria-label="meditick icon"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="46" class="tk-face"></circle><path class="tk-ticks" d="M82 21.9 79 27.1M98.1 38 92.9 41M98.1 82 92.9 79M82 98.1 79 92.9M38 98.1 41 92.9M21.9 82 27.1 79M21.9 38 27.1 41M38 21.9 41 27.1"></path><path class="tk-ticks-main" d="M60 16v6M104 60h-6M60 104v-6M16 60h6"></path><g class="tk-orbit"><circle cx="60" cy="10" r="3"></circle></g><g class="tk-hand"><rect x="55" y="18" width="10" height="46" rx="5" class="tk-pill-b"></rect><path d="M55 23a5 5 0 0 1 10 0v18H55z" class="tk-pill-t"></path><line x1="55" y1="41" x2="65" y2="41" class="tk-seam"></line></g><circle cx="60" cy="60" r="6" class="tk-hub"></circle><circle cx="60" cy="60" r="2.5" class="tk-hub-dot"></circle></svg><i class="tk-spark">✦</i></span><b class="scr-name">meditick</b><span class="bar" style="width:70%"></span><span class="bar" style="width:52%"></span><span class="bar" style="width:60%"></span></div></div>
+<div class="app-meta"><h3>meditick</h3><p>a pill timer &amp; reminder — prescriptions become one clear, calm daily plan. private by design: no account, no cloud.</p><div class="chips"><span class="badge b-ember">● in the forge</span><span class="badge b-steel">ios</span></div><a class="applink" href="meditick/index.html">open the app page <span class="ic">→</span></a></div></article>
+</div></section>
+
+<section class="sec" id="process">
+<div class="sec-head" data-reveal><p class="kicker">02 · the process</p><h2>every app earns its edge</h2></div>
+<div class="steps">
+<div class="step" data-reveal style="--d:0s"><span class="idx">01</span><span class="wire"></span><h3>tinker</h3><p>prototypes on the bench until the idea stops wobbling. most don't survive. good.</p></div>
+<div class="step" data-reveal style="--d:.15s"><span class="idx">02</span><span class="wire"></span><h3>smith</h3><p>heat, hammer, repeat — performance, haptics and detail work until it rings true.</p></div>
+<div class="step" data-reveal style="--d:.3s"><span class="idx">03</span><span class="wire"></span><h3>ship</h3><p>out of the forge and into your pocket. then we start hammering the next rough edge.</p></div>
+</div></section>
+
+<section class="sec manifesto" id="manifesto"><p class="kicker" data-reveal>03 · the manifesto</p><p class="scrub" id="scrub"></p></section>
+
+<footer id="hello">
+<div class="hello" data-reveal><p class="kicker">04 · say hello</p><h2>got an idea that needs hammering?</h2><a class="mail" href="mailto:tinkersmithstudio@gmail.com">tinkersmithstudio@gmail.com <span class="ic">↗</span></a></div>
+<div class="foot-links" data-reveal><span class="badge b-steel">forged by hand</span><span class="badge b-steel">est. 2026</span><span class="badge b-ember">● hammers still warm</span></div>
+<div class="giant-foot" aria-hidden="true">tinkersmith<em>studio</em></div>
+</footer>
+<script src="landing.js"></script></body></html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>meditick — pill timer &amp; reminder · tinkersmithstudio</title>
+<link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../tickicon.css"><link rel="stylesheet" href="meditick.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script></head>
+<body>
+<nav id="mnav"><a class="lock" href="../index.html"><svg class="mark" viewBox="0 0 64 64" fill="currentColor"><path d="M10 15a2 2 0 0 1 2-2h29.2a3 3 0 0 1 2 .77l8.1 7.28a3 3 0 0 1 0 4.46l-8.1 7.28a3 3 0 0 1-2 .77H12a2 2 0 0 1-2-2z"></path><rect x="21" y="35" width="10" height="18" rx="2.5"></rect><path d="M55.5 3.5c.5 2.6 1.4 3.5 4 4-2.6.5-3.5 1.4-4 4-.5-2.6-1.4-3.5-4-4 2.6-.5 3.5-1.4 4-4Z"></path></svg><span class="wm">tinkersmith<em>studio</em></span><span class="crumb">/ meditick</span></a>
+<div class="links"><a href="privacy.html">privacy</a><a href="terms.html">terms</a></div>
+<a class="btn btn-mint btn-sm" href="#policies">app store links <span class="ic">↓</span></a></nav>
+
+<header class="mhero">
+<canvas id="fireflies"></canvas>
+<div class="aurora"></div>
+<div class="pill-float" data-depth="-0.22" style="top:18%;left:8%"><span class="cap c1"></span></div>
+<div class="pill-float" data-depth="-0.12" style="top:66%;left:13%"><span class="cap c2"></span></div>
+<div class="pill-float" data-depth="-0.3" style="top:24%;right:10%"><span class="cap c3"></span></div>
+<div class="pill-float" data-depth="-0.16" style="top:72%;right:16%"><span class="dotp"></span></div>
+<div class="mhero-inner">
+<div class="mhero-copy">
+<p class="kick rise" style="--i:0">✦ fresh off the tinkersmith anvil</p>
+<span class="tickicon xl rise" style="--i:1;margin:18px 0 6px" role="img" aria-label="meditick icon — a clock whose hand is a pill"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="46" class="tk-face"></circle><path class="tk-ticks" d="M82 21.9 79 27.1M98.1 38 92.9 41M98.1 82 92.9 79M82 98.1 79 92.9M38 98.1 41 92.9M21.9 82 27.1 79M21.9 38 27.1 41M38 21.9 41 27.1"></path><path class="tk-ticks-main" d="M60 16v6M104 60h-6M60 104v-6M16 60h6"></path><g class="tk-orbit"><circle cx="60" cy="10" r="3"></circle></g><g class="tk-hand"><rect x="55" y="18" width="10" height="46" rx="5" class="tk-pill-b"></rect><path d="M55 23a5 5 0 0 1 10 0v18H55z" class="tk-pill-t"></path><line x1="55" y1="41" x2="65" y2="41" class="tk-seam"></line></g><circle cx="60" cy="60" r="6" class="tk-hub"></circle><circle cx="60" cy="60" r="2.5" class="tk-hub-dot"></circle></svg><i class="tk-spark">✦</i></span>
+<h1 class="rise" style="--i:1">medi<em>tick</em></h1>
+<p class="mtag rise" style="--i:2">your meds, one calm daily plan.</p>
+<p class="msub rise" style="--i:3">a pill timer &amp; reminder that turns prescriptions into a clear timeline — meal-aware reminders, gentle nudges, streaks and refill forecasts. <b>private by design:</b> no account, no cloud, your health data never leaves the phone.</p>
+<div class="mcta rise" style="--i:4"><a class="btn btn-mint btn-lg" href="#" aria-disabled="true">app store — soon <span class="ic">↗</span></a></div>
+<p class="hint rise" style="--i:5">→ try it: tick the doses on the phone</p>
+</div>
+<div class="phone-wrap rise" data-depth="-0.05" style="--i:3">
+<div class="mphone" id="mphone"><div class="mscreen">
+<div class="statusbar"><span>9:41</span><span class="sdots">●●●</span></div>
+<div class="mhead"><div><p class="mday">friday, jul 18</p><h4 id="mtitle">today</h4></div><span class="tickicon sm"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="46" class="tk-face"></circle><path class="tk-ticks-main" d="M60 16v6M104 60h-6M60 104v-6M16 60h6"></path><g class="tk-hand"><rect x="55" y="18" width="10" height="46" rx="5" class="tk-pill-b"></rect><path d="M55 23a5 5 0 0 1 10 0v18H55z" class="tk-pill-t"></path></g><circle cx="60" cy="60" r="6" class="tk-hub"></circle></svg></span></div>
+<div class="daystrip"><span>m</span><span>t</span><span>w</span><span class="on">t</span><span class="now">f</span><span>s</span><span>s</span></div>
+<div class="ringcard"><svg viewBox="0 0 120 120" class="ring"><circle cx="60" cy="60" r="52" class="ring-bg"></circle><circle cx="60" cy="60" r="52" class="ring-fg" id="ringfg"></circle></svg><div class="ringtxt"><b id="ringpct">0%</b><span id="nextup">next up · 8:00 am</span></div></div>
+<p class="slot-label">morning</p>
+<div class="dose" data-name="metformin"><span class="dpill p1"></span><div class="dtxt"><b>metformin</b><span>500 mg · with breakfast</span></div><span class="dtime">8:00</span><button class="dchk" aria-label="take metformin"></button></div>
+<div class="dose" data-name="vitamin d"><span class="dpill p2"></span><div class="dtxt"><b>vitamin d</b><span>1000 iu · after breakfast</span></div><span class="dtime">8:30</span><button class="dchk" aria-label="take vitamin d"></button></div>
+<div class="nowline"><i></i>now<i></i></div>
+<p class="slot-label">midday</p>
+<div class="dose" data-name="ibuprofen"><span class="dpill p3"></span><div class="dtxt"><b>ibuprofen</b><span>200 mg · with lunch</span></div><span class="dtime">1:00</span><button class="dchk" aria-label="take ibuprofen"></button></div>
+<div class="dock"><i data-lucide="house" class="dic on"></i><i data-lucide="pill" class="dic"></i><span class="fab"><i data-lucide="plus"></i></span><i data-lucide="chart-column" class="dic"></i><i data-lucide="settings-2" class="dic"></i></div>
+<div id="confetti"></div>
+</div></div>
+<div class="phone-glow"></div>
+</div>
+</div></header>
+
+<section class="mfeat">
+<div class="fitem" data-reveal style="--d:0s"><i data-lucide="bell-ring"></i><b>reminders that respect you</b><p>take / snooze / skip right on the banner. meal-aware — shift breakfast once, every dose follows.</p></div>
+<div class="fitem" data-reveal style="--d:.1s"><i data-lucide="flame"></i><b>progress, not guilt</b><p>adherence ring, streaks, on-time rate and a smart insight on which part of day slips.</p></div>
+<div class="fitem" data-reveal style="--d:.2s"><i data-lucide="package"></i><b>refill forecasting</b><p>supply counts down as you log; "runs out in ~9 days" before the bottle surprises you.</p></div>
+<div class="fitem" data-reveal style="--d:.3s"><i data-lucide="lock"></i><b>private by design</b><p>no account, no analytics, no cloud. one on-device file you can export, import or erase.</p></div>
+</section>
+
+<section class="mpol" id="policies">
+<div class="sec-head" data-reveal><p class="kick">the paperwork · app store connect links</p><h2>crisp, human, linkable</h2></div>
+<div class="polgrid">
+<a class="polcard" data-reveal style="--d:0s" href="privacy.html"><i data-lucide="shield-check"></i><b>privacy policy</b><p>what stays on your phone (everything), and the one SDK that doesn't see your health data.</p><span class="go">privacy.html <span class="ic">→</span></span></a>
+<a class="polcard" data-reveal style="--d:.12s" href="terms.html"><i data-lucide="scroll-text"></i><b>terms of use</b><p>meditick pro subscriptions, the free tier, and the not-medical-advice part.</p><span class="go">terms.html <span class="ic">→</span></span></a>
+</div></section>
+
+<footer class="mfoot"><p class="disc">meditick supports your routine — it isn't medical advice. always follow your doctor's instructions.</p>
+<a class="back" href="../index.html">← forged by tinkersmith<em>studio</em></a></footer>
+<script src="meditick.js"></script></body></html>
