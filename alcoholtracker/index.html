@@ -1,0 +1,82 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>alcohol tracker — the honest drink logger · tinkersmithstudio</title>
+<meta name="description" content="alcohol tracker is the fastest, most honest way to see what you actually drink — one-tap logging with a five-second undo, country-correct units with the maths shown, and dry days you bank on purpose. private, on-device, in 20 languages.">
+<link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../dropicon.css"><link rel="stylesheet" href="alcoholtracker.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script></head>
+<body>
+<nav id="anav"><a class="lock" href="../index.html"><svg class="mark" viewBox="0 0 64 64" fill="currentColor"><path d="M10 15a2 2 0 0 1 2-2h29.2a3 3 0 0 1 2 .77l8.1 7.28a3 3 0 0 1 0 4.46l-8.1 7.28a3 3 0 0 1-2 .77H12a2 2 0 0 1-2-2z"></path><rect x="21" y="35" width="10" height="18" rx="2.5"></rect><path d="M55.5 3.5c.5 2.6 1.4 3.5 4 4-2.6.5-3.5 1.4-4 4-.5-2.6-1.4-3.5-4-4 2.6-.5 3.5-1.4 4-4Z"></path></svg><span class="wm">tinkersmith<em>studio</em></span><span class="crumb">/ alcohol tracker</span></a>
+<div class="links"><a href="privacy.html">privacy</a><a href="terms.html">terms</a></div>
+<a class="btn btn-tide btn-sm" href="#policies">app store links <span class="ic">↓</span></a></nav>
+
+<header class="ahero">
+<canvas id="stillwater"></canvas>
+<div class="tidehaze"></div>
+<div class="waterline" aria-hidden="true"></div>
+<div class="float-bit" data-depth="-0.22" style="top:16%;left:8%"><span class="bit-drop"></span></div>
+<div class="float-bit" data-depth="-0.12" style="top:64%;left:12%"><span class="bit-bubbles"><i></i><i></i><i></i></span></div>
+<div class="float-bit" data-depth="-0.3" style="top:21%;right:9%"><span class="bit-glass"><i></i></span></div>
+<div class="float-bit" data-depth="-0.16" style="top:72%;right:16%"><span class="bit-ring"></span></div>
+<div class="ahero-inner">
+<div class="ahero-copy">
+<p class="kick rise" style="--i:0">✦ fresh from the tinkersmith forge</p>
+<span class="dropicon xl breathe rise" style="--i:1;margin:18px 0 6px" role="img" aria-label="alcohol tracker icon — a drop of still water with a slow swirl inside"><i class="dp-body"></i><i class="dp-glint"></i><i class="dp-spark">✦</i></span>
+<h1 class="rise" style="--i:1">alcohol<br><em id="pourword">tracker</em></h1>
+<p class="atag rise" style="--i:2">the honest way to see what you actually drink.</p>
+<p class="asub rise" style="--i:3">a drink diary that never judges — one-tap pours with a <b>five-second undo</b>, country-correct units with the <b>maths printed on every glass</b>, and dry days you bank on purpose. a mirror, not a referee. <b>private &amp; on-device</b>, in 20 languages.</p>
+<div class="acta rise" style="--i:4"><a class="btn btn-tide btn-lg" href="#" aria-disabled="true">app store — soon <span class="ic">↗</span></a><a class="btn btn-ghost btn-lg" href="#" aria-disabled="true">google play — soon <span class="ic">↗</span></a></div>
+<p class="hint rise" style="--i:5">→ try it: pour a couple on the phone — watch the big word fill. or bank a dry day.</p>
+</div>
+<div class="phone-wrap rise" data-depth="-0.05" style="--i:3">
+<div class="aphone"><div class="ascreen" id="ascreen">
+<div class="statusbar"><span>9:41</span><span class="sdots">●●●</span></div>
+<div class="ahead"><div><p class="aday">saturday, aug 23</p><h4 id="atitle">today</h4></div><span class="streakchip" id="astreak">✦ 3 dry this week</span></div>
+<div class="ringwrap">
+<svg viewBox="0 0 140 140" class="aring">
+<circle cx="70" cy="70" r="56" class="aring-dots"></circle>
+<circle cx="70" cy="70" r="56" class="aring-bg"></circle>
+<circle cx="70" cy="70" r="56" class="aring-fg" id="aringfg" transform="rotate(-90 70 70)"></circle>
+</svg>
+<div class="ringglass" id="aglass"><i class="rg-liquid" id="aliquid"></i><i class="rg-check" id="acheck">✓</i></div>
+<div class="ringtxt"><b id="acount">0.0</b><span>of 2 units</span><i id="aleft">2.0 within target</i></div>
+</div>
+<p class="mirrorline" id="amirror">your full allowance is untouched — or simply not needed today.</p>
+<p class="workline" id="aworking">tap a pour and the maths prints here, honest to the millilitre.</p>
+<p class="slot-label">the usual? · tap to log</p>
+<div class="drink" data-ml="330" data-abv="4.8"><span class="gpip"><i style="height:31%"></i></span><div class="dtxt"><b>lager</b><span>330 ml · 4.8%</span></div><span class="du">+1.2 u</span><span class="dflag">past target</span><button class="dadd" aria-label="log lager"></button></div>
+<div class="drink" data-ml="150" data-abv="13.5"><span class="gpip"><i style="height:53%"></i></span><div class="dtxt"><b>red wine</b><span>150 ml · 13.5%</span></div><span class="du">+1.6 u</span><span class="dflag">past target</span><button class="dadd" aria-label="log red wine"></button></div>
+<div class="drink" data-ml="150" data-abv="13"><span class="gpip"><i style="height:52%"></i></span><div class="dtxt"><b>margarita</b><span>150 ml · 13%</span></div><span class="du">+1.5 u</span><span class="dflag">past target</span><button class="dadd" aria-label="log margarita"></button></div>
+<div class="drink" data-ml="110" data-abv="23"><span class="gpip"><i style="height:78%"></i></span><div class="dtxt"><b>espresso martini</b><span>110 ml · 23%</span></div><span class="du">+2.0 u</span><span class="dflag">past target</span><button class="dadd" aria-label="log espresso martini"></button></div>
+<button class="drybtn" id="adry">no drinks today — bank it <em>✓</em></button>
+<div class="dock"><i data-lucide="book-open" class="dic on"></i><i data-lucide="chart-column" class="dic"></i><span class="fab"><i data-lucide="plus"></i></span><i data-lucide="calendar" class="dic"></i><i data-lucide="settings-2" class="dic"></i></div>
+<div class="atoast" id="atoast"><span id="atoastmsg"></span><button id="aundo">undo</button><i class="tbar" id="atbar"></i></div>
+<div id="fizzbox"></div>
+</div></div>
+<div class="phone-glow"></div>
+</div>
+</div></header>
+
+<section class="afeat">
+<div class="fitem" data-reveal style="--d:0s"><i data-lucide="zap"></i><b>one tap, five to undo</b><p>your usuals live on the home screen. tap → logged, haptic, done — with a five-second undo. no spinner, no confirm dialog, ever.</p></div>
+<div class="fitem" data-reveal style="--d:.1s"><i data-lucide="calculator"></i><b>the working, shown</b><p>every pour prints its maths — ml × abv × 0.789 ÷ your country's gram. a "unit" is 8 g in the uk, 14 in the us, 20 in japan. you get the number you already know.</p></div>
+<div class="fitem" data-reveal style="--d:.2s"><i data-lucide="calendar-check"></i><b>dry days are banked</b><p>an empty day proves nothing — you bank a dry day on purpose, and it lands in the calendar in moss. a slip pauses a streak; it never resets one.</p></div>
+<div class="fitem" data-reveal style="--d:.3s"><i data-lucide="lock"></i><b>quiet by design</b><p>on-device, no account, face-id lock — and lock-screen nudges that never say the word "alcohol". speaks 20 languages with one honest voice.</p></div>
+</section>
+
+<section class="awork" id="working">
+<div class="wcopy" data-reveal><p class="kick">the party trick</p><h2>every number <em>shows its maths.</em></h2><p class="wsub">no black boxes. the add sheet prints the derivation under the result while you type, so the accuracy nerds — our people — can check us on a beer mat.</p><p class="wnote">and the divisor is yours: the same pour is <b>1.3 units</b> at who's 10 g, <b>1.6 units</b> in the uk, <b>0.9 standard drinks</b> in the us.</p></div>
+<div class="wcards">
+<div class="receipt" data-reveal style="--d:.12s"><span class="rc-row"><b class="rc-chip c-tide">330 ml</b><i>×</i><b class="rc-chip c-amber">4.8%</b><i>×</i><b class="rc-chip c-dim">0.789</b><i>÷</i><b class="rc-chip c-dim">10 g</b><i>=</i><b class="rc-chip c-moss rc-result">1.3 units</b></span><span class="rc-cap">printed on every pour</span></div>
+<div class="bankcard" data-reveal style="--d:.26s"><span class="bk-day">saturday</span><span class="bk-note">no drinks logged — marked by you</span><span class="banked">banked ✓</span></div>
+</div>
+</section>
+
+<section class="apol" id="policies">
+<div class="sec-head" data-reveal><p class="kick">the paperwork · app store connect links</p><h2>crisp, human, linkable</h2></div>
+<div class="polgrid">
+<a class="polcard" data-reveal style="--d:0s" href="privacy.html"><i data-lucide="shield-check"></i><b>privacy policy</b><p>what stays on your phone (your whole diary), the zero analytics SDKs, and the one optional write-only Apple Health switch.</p><span class="go">privacy.html <span class="ic">→</span></span></a>
+<a class="polcard" data-reveal style="--d:.12s" href="terms.html"><i data-lucide="scroll-text"></i><b>terms of use</b><p>the generous free tier, what pro adds, the 18+ part, and why a bac estimate is never a green light to drive.</p><span class="go">terms.html <span class="ic">→</span></span></a>
+</div></section>
+
+<footer class="afoot"><p class="disc">alcohol tracker is a mirror, not a referee — it isn't medical advice, and estimates are never a green light to drive. 18+.</p>
+<a class="back" href="../index.html">← forged by tinkersmith<em>studio</em></a></footer>
+<script src="alcoholtracker.js"></script></body></html>
