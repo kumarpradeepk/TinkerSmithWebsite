@@ -5,7 +5,7 @@
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script></head>
 <body>
 <nav id="anav"><a class="lock" href="../index.html"><svg class="mark" viewBox="0 0 64 64" fill="currentColor"><path d="M10 15a2 2 0 0 1 2-2h29.2a3 3 0 0 1 2 .77l8.1 7.28a3 3 0 0 1 0 4.46l-8.1 7.28a3 3 0 0 1-2 .77H12a2 2 0 0 1-2-2z"></path><rect x="21" y="35" width="10" height="18" rx="2.5"></rect><path d="M55.5 3.5c.5 2.6 1.4 3.5 4 4-2.6.5-3.5 1.4-4 4-.5-2.6-1.4-3.5-4-4 2.6-.5 3.5-1.4 4-4Z"></path></svg><span class="wm">tinkersmith<em>studio</em></span><span class="crumb">/ alcohol tracker</span></a>
-<div class="links"><a href="privacy.html">privacy</a><a href="terms.html">terms</a></div>
+<div class="links"><a href="support.html">support</a><a href="privacy.html">privacy</a><a href="terms.html">terms</a></div>
 <a class="btn btn-tide btn-sm" href="#policies">app store links <span class="ic">↓</span></a></nav>
 
 <header class="ahero">
@@ -19,8 +19,8 @@
 <div class="ahero-inner">
 <div class="ahero-copy">
 <p class="kick rise" style="--i:0">✦ fresh from the tinkersmith forge</p>
-<span class="dropicon xl breathe rise" style="--i:1;margin:18px 0 6px" role="img" aria-label="alcohol tracker icon — a drop of still water with a slow swirl inside"><i class="dp-body"></i><i class="dp-glint"></i><i class="dp-spark">✦</i></span>
-<h1 class="rise" style="--i:1">alcohol<br><em id="pourword">tracker</em></h1>
+<span class="dropicon xl breathe rise" style="--i:1;margin:18px 0 6px" role="img" aria-label="alcohol tracker icon — a bottle and a wine glass"><svg viewBox="0 0 120 120" aria-hidden="true"><clipPath id="dpBowl"><path d="M17 50h36c0 11.6-8.1 21-18 21s-18-9.4-18-21z"/></clipPath><g class="dp-glass"><path d="M17 50h36c0 11.6-8.1 21-18 21s-18-9.4-18-21z"/><rect x="32.5" y="69" width="5" height="26" rx="1"/><rect x="24" y="94" width="22" height="6" rx="3"/><g clip-path="url(#dpBowl)"><rect class="dp-pour" x="17" y="50" width="36" height="21"/></g></g><rect class="dp-stream" x="37.5" y="10" width="3.6" height="42" rx="1.8"/><circle class="dp-drip" cx="39.3" cy="13" r="2.2"/><g class="dp-bottle"><rect x="62" y="15" width="17" height="9" rx="1.5"/><path d="M64 26h13v18.6c7 2 12 8.4 12 15.8V96a6 6 0 0 1-6 6H58a6 6 0 0 1-6-6V60.4c0-7.4 5-13.8 12-15.8V26z"/><rect class="dp-label" x="75" y="60" width="14" height="20" rx="1"/></g></svg><i class="dp-spark">✦</i></span>
+<h1 class="rise" style="--i:1"><span id="fizzword">alcohol</span><br><em id="pourword">tracker</em></h1>
 <p class="atag rise" style="--i:2">the honest way to see what you actually drink.</p>
 <p class="asub rise" style="--i:3">a drink diary that never judges — one-tap pours with a <b>five-second undo</b>, country-correct units with the <b>maths printed on every glass</b>, and dry days you bank on purpose. a mirror, not a referee. <b>private &amp; on-device</b>, in 20 languages.</p>
 <div class="acta rise" style="--i:4"><a class="btn btn-tide btn-lg" href="#" aria-disabled="true">app store — soon <span class="ic">↗</span></a><a class="btn btn-ghost btn-lg" href="#" aria-disabled="true">google play — soon <span class="ic">↗</span></a></div>
@@ -29,25 +29,29 @@
 <div class="phone-wrap rise" data-depth="-0.05" style="--i:3">
 <div class="aphone"><div class="ascreen" id="ascreen">
 <div class="statusbar"><span>9:41</span><span class="sdots">●●●</span></div>
-<div class="ahead"><div><p class="aday">saturday, aug 23</p><h4 id="atitle">today</h4></div><span class="streakchip" id="astreak">✦ 3 dry this week</span></div>
-<div class="ringwrap">
-<svg viewBox="0 0 140 140" class="aring">
-<circle cx="70" cy="70" r="56" class="aring-dots"></circle>
-<circle cx="70" cy="70" r="56" class="aring-bg"></circle>
-<circle cx="70" cy="70" r="56" class="aring-fg" id="aringfg" transform="rotate(-90 70 70)"></circle>
-</svg>
-<div class="ringglass" id="aglass"><i class="rg-liquid" id="aliquid"></i><i class="rg-check" id="acheck">✓</i></div>
-<div class="ringtxt"><b id="acount">0.0</b><span>of 2 units</span><i id="aleft">2.0 within target</i></div>
+<div class="ahead"><div><p class="aday">diary</p><h4 id="atitle">today</h4><p class="adate">saturday, aug 23</p></div><span class="streakchip" id="astreak">✦ 3 dry this week</span></div>
+<div class="probanner"><i data-lucide="lock" class="pb-ic"></i><div class="pb-t"><b>your history is waiting</b><span>this week free · pro unlocks the rest</span></div><span class="pb-go">›</span></div>
+<p class="slot-label">the usual? · tap to log</p>
+<div class="usualrow">
+<div class="drink" data-ml="330" data-abv="4.8"><button class="dadd" aria-label="log lager"></button><div class="dtxt"><b>lager</b><span>330 ml · 4.8%</span></div><span class="du">+1.2 u</span><span class="dflag">past target</span></div>
+<div class="drink" data-ml="150" data-abv="13.5"><button class="dadd" aria-label="log red wine"></button><div class="dtxt"><b>red wine</b><span>150 ml · 13.5%</span></div><span class="du">+1.6 u</span><span class="dflag">past target</span></div>
+<div class="drink" data-ml="150" data-abv="13"><button class="dadd" aria-label="log margarita"></button><div class="dtxt"><b>margarita</b><span>150 ml · 13%</span></div><span class="du">+1.5 u</span><span class="dflag">past target</span></div>
+<div class="drink" data-ml="110" data-abv="23"><button class="dadd" aria-label="log espresso martini"></button><div class="dtxt"><b>espresso martini</b><span>110 ml · 23%</span></div><span class="du">+2.0 u</span><span class="dflag">past target</span></div>
+</div>
+<div class="intake">
+<div class="in-top"><span class="in-name"><span class="ringglass" id="aglass"><i class="rg-liquid" id="aliquid"></i><i class="rg-check" id="acheck">✓</i></span>intake</span><i class="in-info">i</i></div>
+<div class="in-main"><div class="in-num"><b id="acount">0.0</b><span>of 2.0 standard drinks</span></div>
+<svg viewBox="0 0 140 140" class="aring" aria-hidden="true"><circle cx="70" cy="70" r="56" class="aring-bg"></circle><circle cx="70" cy="70" r="56" class="aring-fg" id="aringfg" transform="rotate(-90 70 70)"></circle></svg></div>
+<div class="in-bars" aria-hidden="true"><i style="--h:.62"></i><i style="--h:.84"></i><i style="--h:.3"></i><i style="--h:.06"></i><i style="--h:.48"></i><i style="--h:.72"></i><i id="abartoday" style="--h:0"></i><span>this week</span></div>
+<div class="in-foot"><span class="in-pill" id="aleft">2.0 drinks left today</span><span class="in-goal">edit goal →</span></div>
 </div>
 <p class="mirrorline" id="amirror">your full allowance is untouched — or simply not needed today.</p>
 <p class="workline" id="aworking">tap a pour and the maths prints here, honest to the millilitre.</p>
-<p class="slot-label">the usual? · tap to log</p>
-<div class="drink" data-ml="330" data-abv="4.8"><span class="gpip"><i style="height:31%"></i></span><div class="dtxt"><b>lager</b><span>330 ml · 4.8%</span></div><span class="du">+1.2 u</span><span class="dflag">past target</span><button class="dadd" aria-label="log lager"></button></div>
-<div class="drink" data-ml="150" data-abv="13.5"><span class="gpip"><i style="height:53%"></i></span><div class="dtxt"><b>red wine</b><span>150 ml · 13.5%</span></div><span class="du">+1.6 u</span><span class="dflag">past target</span><button class="dadd" aria-label="log red wine"></button></div>
-<div class="drink" data-ml="150" data-abv="13"><span class="gpip"><i style="height:52%"></i></span><div class="dtxt"><b>margarita</b><span>150 ml · 13%</span></div><span class="du">+1.5 u</span><span class="dflag">past target</span><button class="dadd" aria-label="log margarita"></button></div>
-<div class="drink" data-ml="110" data-abv="23"><span class="gpip"><i style="height:78%"></i></span><div class="dtxt"><b>espresso martini</b><span>110 ml · 23%</span></div><span class="du">+2.0 u</span><span class="dflag">past target</span><button class="dadd" aria-label="log espresso martini"></button></div>
+<div class="baccard"><i data-lucide="lock" class="bc-ic"></i><div class="bc-t"><b>bac estimate</b><span>live estimate · time to zero · trends</span></div><span class="probadge">pro</span></div>
+<div class="enthead"><span class="slot-label" style="margin:0">entries</span><span class="entn" id="apours">0 pours</span></div>
+<div class="entries" id="aentries"><p class="eempty" id="aempty">nothing yet — an honest empty is still honest</p></div>
 <button class="drybtn" id="adry">no drinks today — bank it <em>✓</em></button>
-<div class="dock"><i data-lucide="book-open" class="dic on"></i><i data-lucide="chart-column" class="dic"></i><span class="fab"><i data-lucide="plus"></i></span><i data-lucide="calendar" class="dic"></i><i data-lucide="settings-2" class="dic"></i></div>
+<div class="dock"><span class="dockbar"><span class="dpill"><i data-lucide="book-open" class="dic on"></i><em>diary</em></span><i data-lucide="chart-column" class="dic"></i><i data-lucide="calendar" class="dic"></i><i data-lucide="settings-2" class="dic"></i></span><span class="fab"><i data-lucide="plus"></i></span></div>
 <div class="atoast" id="atoast"><span id="atoastmsg"></span><button id="aundo">undo</button><i class="tbar" id="atbar"></i></div>
 <div id="fizzbox"></div>
 </div></div>
@@ -60,6 +64,10 @@
 <div class="fitem" data-reveal style="--d:.1s"><i data-lucide="calculator"></i><b>the working, shown</b><p>every pour prints its maths — ml × abv × 0.789 ÷ your country's gram. a "unit" is 8 g in the uk, 14 in the us, 20 in japan. you get the number you already know.</p></div>
 <div class="fitem" data-reveal style="--d:.2s"><i data-lucide="calendar-check"></i><b>dry days are banked</b><p>an empty day proves nothing — you bank a dry day on purpose, and it lands in the calendar in moss. a slip pauses a streak; it never resets one.</p></div>
 <div class="fitem" data-reveal style="--d:.3s"><i data-lucide="lock"></i><b>quiet by design</b><p>on-device, no account, face-id lock — and lock-screen nudges that never say the word "alcohol". speaks 20 languages with one honest voice.</p></div>
+<div class="fitem" data-reveal style="--d:.4s"><i data-lucide="trending-up"></i><b>weeks that improve</b><p>the statistics screen hands down a verdict, not a scold — trend against last week, your steadiest day, and the money the dry ones gave back.</p></div>
+<div class="fitem" data-reveal style="--d:.5s"><i data-lucide="coins"></i><b>cost and calories</b><p>every pour is priced and measured as you log it. the round you did not buy turns into a number you can spend somewhere better.</p></div>
+<div class="fitem" data-reveal style="--d:.6s"><i data-lucide="palette"></i><b>themes that stay subtle</b><p>warm, dark and monochrome. nothing on screen announces what the app is for — including the icon sitting on your home screen.</p></div>
+<div class="fitem" data-reveal style="--d:.7s"><i data-lucide="watch"></i><b>wrist and home screen</b><p>log the usual from your watch without reaching for the phone, and keep today and the week on a widget — a glance, not an app launch.</p></div>
 </section>
 
 <section class="awork" id="working">
@@ -73,8 +81,9 @@
 <section class="apol" id="policies">
 <div class="sec-head" data-reveal><p class="kick">the paperwork · app store connect links</p><h2>crisp, human, linkable</h2></div>
 <div class="polgrid">
-<a class="polcard" data-reveal style="--d:0s" href="privacy.html"><i data-lucide="shield-check"></i><b>privacy policy</b><p>what stays on your phone (your whole diary), the zero analytics SDKs, and the one optional write-only Apple Health switch.</p><span class="go">privacy.html <span class="ic">→</span></span></a>
-<a class="polcard" data-reveal style="--d:.12s" href="terms.html"><i data-lucide="scroll-text"></i><b>terms of use</b><p>the generous free tier, what pro adds, the 18+ part, and why a bac estimate is never a green light to drive.</p><span class="go">terms.html <span class="ic">→</span></span></a>
+<a class="polcard" data-reveal style="--d:0s" href="support.html"><i data-lucide="circle-help"></i><b>support</b><p>questions about logging, standard drinks, dry days, purchases, or privacy? we are here to help.</p><span class="go">support.html <span class="ic">→</span></span></a>
+<a class="polcard" data-reveal style="--d:.12s" href="privacy.html"><i data-lucide="shield-check"></i><b>privacy policy</b><p>what stays on your phone (your whole diary), the zero analytics SDKs, and the one optional write-only Apple Health switch.</p><span class="go">privacy.html <span class="ic">→</span></span></a>
+<a class="polcard" data-reveal style="--d:.24s" href="terms.html"><i data-lucide="scroll-text"></i><b>terms of use</b><p>the generous free tier, what pro adds, the 18+ part, and why a bac estimate is never a green light to drive.</p><span class="go">terms.html <span class="ic">→</span></span></a>
 </div></section>
 
 <footer class="afoot"><p class="disc">alcohol tracker is a mirror, not a referee — it isn't medical advice, and estimates are never a green light to drive. 18+.</p>
