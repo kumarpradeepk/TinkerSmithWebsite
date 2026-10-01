@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>spore — mushroom identifier &amp; field guide · tinkersmithstudio</title>
+<meta name="description" content="spore turns a photo of a mushroom into a calm, careful answer: likely matches, the look-alikes that could harm you, and a field guide with licensed photographs. a guide, never a guarantee.">
+<meta name="theme-color" content="#060F0A">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap">
+<link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../sporeicon.css"><link rel="stylesheet" href="spore.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script></head>
+<body>
+<nav id="snav"><a class="lock" href="../index.html"><svg class="mark" viewBox="0 0 64 64" fill="currentColor"><path d="M10 15a2 2 0 0 1 2-2h29.2a3 3 0 0 1 2 .77l8.1 7.28a3 3 0 0 1 0 4.46l-8.1 7.28a3 3 0 0 1-2 .77H12a2 2 0 0 1-2-2z"></path><rect x="21" y="35" width="10" height="18" rx="2.5"></rect><path d="M55.5 3.5c.5 2.6 1.4 3.5 4 4-2.6.5-3.5 1.4-4 4-.5-2.6-1.4-3.5-4-4 2.6-.5 3.5-1.4 4-4Z"></path></svg><span class="wm">tinkersmith<em>studio</em></span><span class="crumb">/ spore</span></a>
+<div class="links"><a href="support.html">support</a><a href="safety.html">safety</a><a href="privacy.html">privacy</a><a href="terms.html">terms</a></div>
+<a class="btn btn-lichen btn-sm" href="#policies">app store links <span class="ic">↓</span></a></nav>
+
+<header class="shero">
+<div class="canopy"></div><div class="godray r1"></div><div class="godray r2"></div><div class="godray r3"></div>
+<canvas id="sporefall"></canvas>
+<div class="floor" aria-hidden="true"><svg viewBox="0 0 1440 260" preserveAspectRatio="xMidYMax slice"><defs><symbol id="shr" viewBox="0 0 40 50"><path d="M2 23C2 10 10 2 20 2s18 8 18 21c-5-2-11-3-18-3S7 21 2 23z"/><path d="M16 20c0 11-1 20-3 29h14c-2-9-3-18-3-29z"/></symbol><symbol id="shr2" viewBox="0 0 40 60"><path d="M8 26C8 12 13 2 20 2s12 10 12 24c-4-2-8-3-12-3s-8 1-12 3z"/><path d="M17 24c0 12-1 24-2 35h10c-1-11-2-23-2-35z"/></symbol><radialGradient id="capGlow"><stop offset="0" stop-color="#9BE3B0" stop-opacity=".35"/><stop offset="1" stop-color="#9BE3B0" stop-opacity="0"/></radialGradient></defs>
+<g class="layer" data-depth="-0.06"><path class="l-far" d="M0 150C120 120 240 140 360 125S600 100 720 120 960 150 1080 128 1320 110 1440 130V260H0Z"/><g class="l-far"><use href="#shr" x="150" y="98" width="30" height="37.5"/><use href="#shr" x="520" y="82" width="22" height="27.5"/><use href="#shr" x="905" y="104" width="26" height="32.5"/><use href="#shr" x="1210" y="86" width="24" height="30.0"/></g></g>
+<g class="layer" data-depth="-0.12"><ellipse class="glowcap pulse " cx="91" cy="160" rx="46" ry="22"/><ellipse class="glowcap pulse d2" cx="808" cy="162" rx="42" ry="20"/><ellipse class="glowcap pulse d3" cx="1185" cy="168" rx="52" ry="24"/><ellipse class="glowcap pulse d2" cx="710" cy="130" rx="30" ry="14"/><ellipse class="glowcap pulse " cx="1358" cy="140" rx="28" ry="13"/><path class="l-mid" d="M0 190C160 170 300 185 440 172S700 150 860 170 1160 196 1300 176 1420 168 1440 172V260H0Z"/><g class="l-mid"><use href="#shr2" x="230" y="122" width="34" height="47.599999999999994"/><use href="#shr" x="260" y="140" width="28" height="39.199999999999996"/><use href="#shr" x="690" y="118" width="40" height="56.0"/><use href="#shr2" x="1040" y="128" width="30" height="42.0"/><use href="#shr" x="1340" y="130" width="36" height="50.4"/></g></g>
+<g class="layer" data-depth="-0.2"><path class="l-near" d="M0 225C140 210 260 222 420 212S700 200 880 214 1180 230 1320 216 1420 214 1440 216V260H0Z"/><g class="l-near"><use href="#shr" x="60" y="150" width="62" height="83.7"/><use href="#shr2" x="118" y="170" width="38" height="51.300000000000004"/><use href="#shr" x="780" y="152" width="56" height="75.60000000000001"/><use href="#shr" x="1150" y="158" width="70" height="94.5"/><use href="#shr2" x="1225" y="180" width="36" height="48.6"/></g></g></svg></div>
+<div class="shero-inner">
+<div class="shero-copy">
+<p class="kick rise" style="--i:0">✦ fresh from the tinkersmith forge</p>
+<div style="margin:18px 0 4px"><span class="sporeicon xl" role="img" aria-label="spore icon — a little mushroom under scan brackets, releasing spores"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><linearGradient id="spBeamHero" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9BE3B0" stop-opacity="0"/><stop offset=".85" stop-color="#9BE3B0" stop-opacity=".28"/><stop offset="1" stop-color="#E8F7EC" stop-opacity=".9"/></linearGradient></defs><path class="sp-corner" d="M14 30V22a8 8 0 0 1 8-8h8M90 14h8a8 8 0 0 1 8 8v8M106 90v8a8 8 0 0 1-8 8h-8M30 106h-8a8 8 0 0 1-8-8v-8"/><ellipse class="sp-ground" cx="60" cy="98" rx="30" ry="5"/><g class="sp-shroom"><path class="sp-stem" d="M52 60c0 14-2 26-5 37 8 3 18 3 26 0-3-11-5-23-5-37z"/><path class="sp-cap" d="M24 62c0-22 16-36 36-36s36 14 36 36c-11-4-23-6-36-6s-25 2-36 6z"/><path class="sp-capshade" d="M24 62c11-4 23-6 36-6s25 2 36 6c-1 3-3 4-6 4-9-3-19-4-30-4s-21 1-30 4c-3 0-5-1-6-4z"/><path class="sp-gills" d="M38 63l6-3M50 61l3-3M70 61l-3-3M82 63l-6-3"/><circle class="sp-dot" cx="47" cy="40" r="4"/><circle class="sp-dot" cx="66" cy="34" r="3"/><circle class="sp-dot" cx="77" cy="46" r="3.5"/></g><circle class="sp-spore" cx="44" cy="66" r="2" style="--dx:-7px"/><circle class="sp-spore s2" cx="60" cy="64" r="1.7" style="--dx:4px"/><circle class="sp-spore s3" cx="75" cy="66" r="2" style="--dx:8px"/><circle class="sp-spore s4" cx="52" cy="65" r="1.4" style="--dx:-3px"/><rect class="sp-scan" x="14" y="38" width="92" height="24" rx="4" fill="url(#spBeamHero)"/></svg><i class="sp-spark">✦</i></span></div>
+<h1 aria-label="spore"><span class="L" style="--i:0">s</span><span class="L" style="--i:1">p</span><span class="L" style="--i:2">o</span><span class="L" style="--i:3">r</span><span class="L" style="--i:4">e</span><span class="L dot" style="--i:5">.</span></h1>
+<p class="stag rise" style="--i:3">know what you <i>found</i>.</p>
+<p class="ssub rise" style="--i:4">point your phone at a mushroom. spore studies the cap, gills and stem, names the likely species, and — before anything else — <b>rules out the look-alikes that could harm you</b>. then it opens a field guide with licensed photographs. calm, careful, and honest about doubt.</p>
+<div class="scta rise" style="--i:5"><a class="btn btn-lichen btn-lg" href="#" aria-disabled="true">app store — soon <span class="ic">↗</span></a><a class="btn btn-ghost btn-lg" href="#how">how it works</a></div>
+<p class="hint rise" style="--i:6">→ watch the phone: a real identification, start to finish</p>
+</div>
+<div class="phone-wrap rise" data-depth="-0.04" style="--i:3">
+<div class="sphone"><div class="sscreen" id="sscreen" data-p="0" aria-label="animated demo of a spore identification">
+<div class="sbar"><span>9:41</span><span>●●●</span></div>
+<div class="stop"><span class="sx">✕</span><span class="sdots"><i></i><i></i><i></i><i></i></span><span style="width:30px"></span></div>
+<div class="scard"><div class="sgrid"></div>
+<svg class="soutline" viewBox="0 0 310 310" aria-hidden="true"><g transform="translate(155 244) scale(1.14) translate(-155 -244)"><ellipse id="oGround" class="o-ground" cx="155" cy="250" rx="60" ry="7"/><path id="oEcho" class="o-echo"/><path id="oGlow" class="o-glow"/><path id="oMain" class="o-main"/><path id="oGills" class="o-gills"/></g></svg>
+<div class="sresult"><svg viewBox="0 0 160 180" aria-hidden="true"><defs><linearGradient id="rscap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD678"/><stop offset=".6" stop-color="#F0A93A"/><stop offset="1" stop-color="#D98C22"/></linearGradient><linearGradient id="rsstem" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#E9A43A"/><stop offset=".5" stop-color="#FFCB6B"/><stop offset="1" stop-color="#DB9530"/></linearGradient></defs><ellipse cx="80" cy="166" rx="38" ry="6" fill="rgba(0,0,0,.22)"/><path d="M68 84 64 150c0 12 32 12 32 0l-4-66z" fill="url(#rsstem)"/><path d="M12 50c10-16 34-22 68-20 34-2 58 4 68 20-4 7-12 10-22 8-10 10-22 20-30 30H64C56 78 44 68 34 58c-10 2-18-1-22-8z" fill="url(#rscap)"/><path d="M34 58c10 8 20 18 30 30M48 56c8 10 14 20 20 32M64 54c4 12 6 22 8 34M96 54c-4 12-6 22-8 34M112 56c-8 10-14 20-20 32M126 58c-10 8-20 18-30 30" fill="none" stroke="#B9731A" stroke-width="1.6" stroke-linecap="round" opacity=".75"/><path d="M20 47c14-10 36-13 60-12 24-1 46 2 60 12" fill="none" stroke="#FFE7A8" stroke-width="2.2" stroke-linecap="round" opacity=".8"/></svg></div>
+<div class="sflash"></div>
+<div class="scorners"><i></i><i></i><i></i><i></i></div>
+<div class="spill"><b></b>photo received · sharp &amp; bright</div>
+<div class="sbeam"></div>
+<span class="spin"><span>cap shape</span></span><span class="spin left"><span>ridge pattern</span></span><span class="spin"><span>stem &amp; base</span></span>
+<div class="scaption" id="sCaption">LIKE A PORCINI?</div>
+<div class="slook"><span class="lthumb"></span><span><b>Jack-o'-Lantern</b><small>toxic look-alike</small></span><span class="lstate">ruled out</span></div>
+</div>
+<div class="shead" id="sHead"></div>
+<div class="ssteps">
+<div class="srow"><span class="st"></span>photo is sharp and well lit<em>clear</em></div>
+<div class="srow"><span class="st"></span>cap, ridges and stem read<em>3 features</em></div>
+<div class="srow"><span class="st"></span>compared with 4,200 species<em>3 close</em></div>
+<div class="srow"><span class="st"></span>checked toxic look-alikes<em>1 ruled out</em></div>
+</div>
+<div class="sres">
+<div class="schips" style="--i:0"><span class="schip m"><svg class="ring" viewBox="0 0 18 18"><circle class="rbg" cx="9" cy="9" r="7"/><circle class="rfg" cx="9" cy="9" r="7"/></svg>96% match</span><span class="schip e"><i></i>edible · cook well</span></div>
+<p style="--i:1">blunt, forked ridges and a solid stem set it apart from the toxic jack-o'-lantern, which has sharp true gills and grows on wood.</p>
+<div class="sbtn" style="--i:2">see full profile →</div>
+<p class="snote" style="--i:3">a guide, not a guarantee. confirm with an expert before eating.</p>
+</div>
+</div></div>
+<div class="phone-glow"></div>
+</div>
+</div></header>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Cantharellus cibarius<b>✦</b>Amanita muscaria<b>✦</b>Morchella esculenta<b>✦</b>Boletus edulis<b>✦</b>Macrolepiota procera<b>✦</b>Coprinus comatus<b>✦</b>Trametes versicolor<b>✦</b>Laetiporus sulphureus<b>✦</b>Hydnum repandum<b>✦</b>Pleurotus ostreatus<b>✦</b>Craterellus cornucopioides<b>✦</b>Lactarius indigo<b>✦</b></span><span>Cantharellus cibarius<b>✦</b>Amanita muscaria<b>✦</b>Morchella esculenta<b>✦</b>Boletus edulis<b>✦</b>Macrolepiota procera<b>✦</b>Coprinus comatus<b>✦</b>Trametes versicolor<b>✦</b>Laetiporus sulphureus<b>✦</b>Hydnum repandum<b>✦</b>Pleurotus ostreatus<b>✦</b>Craterellus cornucopioides<b>✦</b>Lactarius indigo<b>✦</b></span></div></div>
+
+<section class="sec" id="features">
+<div class="sec-head" data-reveal><p class="kick">01 · in the field</p><h2>a photo in. <em>a careful answer</em> out.</h2><p class="lede">spore is built for the moment you crouch beside something strange on the forest floor — and for every quiet minute of reading afterwards.</p></div>
+<div class="feat">
+<div class="fcard" data-reveal style="--d:0s"><i data-lucide="scan-eye"></i><b>a photo, then a name</b><p>shoot the cap, the underside and the stem. spore reads the features and gives you its best match with an honest confidence — or tells you plainly when it isn't sure.</p></div>
+<div class="fcard" data-reveal style="--d:.1s"><i data-lucide="shield-alert"></i><b>look-alikes first</b><p>every result is checked against the species it could be confused with. the dangerous twins are named, compared side by side, and never hidden.</p></div>
+<div class="fcard" data-reveal style="--d:.2s"><i data-lucide="book-open"></i><b>a living field guide</b><p>morphology, habitat, season and taxonomy, with community photographs from GBIF and Mushroom Observer — shown only when their licence allows.</p></div>
+<div class="fcard" data-reveal style="--d:.3s"><i data-lucide="notebook-pen"></i><b>your own field book</b><p>save finds, add notes, keep your scans. it all lives on your phone — no account, no cloud copy of your collection.</p></div>
+</div></section>
+
+<section class="morph" id="morph">
+<div class="mstage">
+<div class="msteps">
+<p class="kick" style="margin-bottom:-8px">02 · how spore reads a mushroom</p>
+<div class="mstep" data-shape="porcini"><span class="n">01 · the cap</span><h3>shape before colour</h3><p>dome, funnel, bell or parasol — the silhouette narrows thousands of species to a family long before colour does.</p></div>
+<div class="mstep" data-shape="flyagaric"><span class="n">02 · the details</span><h3>warts, rings, a cup</h3><p>veil remnants, a skirt on the stem, a sac at the base. small things, and often the ones that matter most.</p></div>
+<div class="mstep" data-shape="morel"><span class="n">03 · the texture</span><h3>pits, ridges, pores</h3><p>a honeycomb cap or a sponge of pores tells a different story from blade-like gills.</p></div>
+<div class="mstep" data-shape="deathcap"><span class="n">04 · the danger</span><h3>the deadly twins</h3><p>some of the most toxic mushrooms on earth look ordinary. spore always checks them — and says so.</p></div>
+<div class="mstep" data-shape="chanterelle"><span class="n">05 · the answer</span><h3>a name, with care</h3><p>the likely species, the confidence behind it, and a reminder you'll see on every result: a guide, not a guarantee.</p></div>
+</div>
+<div class="mart" aria-hidden="true"><div class="mbar"><i id="mBar"></i></div>
+<svg viewBox="0 0 310 310"><g transform="translate(155 236) scale(1.06) translate(-155 -244)"><path id="mGlow" class="o-glow"/><path id="mBody" class="o-main"/><path id="mGills" class="o-gills"/><path id="mRing" class="o-gills" style="stroke-width:1.6"/><path id="mSpots" style="fill:#E8F7EC"/><path id="mVolva" class="o-gills" style="stroke-width:1.6"/><path id="mNet" class="o-gills"/></g></svg>
+<div class="mname"><small id="mSci">Boletus edulis</small><span id="mName">porcini</span></div></div>
+</div></section>
+
+<section class="sec" id="safety">
+<div class="safety">
+<div data-reveal><p class="kick">03 · the honest part</p><h2 class="big">a guide, <em>not a guarantee</em>.</h2><p class="lede">no app can tell you a wild mushroom is safe to eat — and spore never will. it is here to help you look closer, learn faster and ask better questions of a real expert.</p>
+<ul class="warns">
+<li><i data-lucide="triangle-alert"></i><span><b>never eat a mushroom on an app's word.</b> confirm every identification in person with a qualified local expert.</span></li>
+<li><i data-lucide="eye"></i><span><b>doubt is shown, not hidden.</b> low confidence and several close matches are said out loud.</span></li>
+<li><i data-lucide="phone-call"></i><span><b>if you think someone has eaten something toxic,</b> contact your local emergency number or poison centre immediately.</span></li>
+</ul></div>
+<div class="vs" data-reveal style="--d:.15s">
+<div class="vcard good"><div class="vart"><svg viewBox="0 0 160 180" aria-hidden="true"><defs><linearGradient id="vgcap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD678"/><stop offset=".6" stop-color="#F0A93A"/><stop offset="1" stop-color="#D98C22"/></linearGradient><linearGradient id="vgstem" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#E9A43A"/><stop offset=".5" stop-color="#FFCB6B"/><stop offset="1" stop-color="#DB9530"/></linearGradient></defs><ellipse cx="80" cy="166" rx="38" ry="6" fill="rgba(0,0,0,.22)"/><path d="M68 84 64 150c0 12 32 12 32 0l-4-66z" fill="url(#vgstem)"/><path d="M12 50c10-16 34-22 68-20 34-2 58 4 68 20-4 7-12 10-22 8-10 10-22 20-30 30H64C56 78 44 68 34 58c-10 2-18-1-22-8z" fill="url(#vgcap)"/><path d="M34 58c10 8 20 18 30 30M48 56c8 10 14 20 20 32M64 54c4 12 6 22 8 34M96 54c-4 12-6 22-8 34M112 56c-8 10-14 20-20 32M126 58c-10 8-20 18-30 30" fill="none" stroke="#B9731A" stroke-width="1.6" stroke-linecap="round" opacity=".75"/><path d="M20 47c14-10 36-13 60-12 24-1 46 2 60 12" fill="none" stroke="#FFE7A8" stroke-width="2.2" stroke-linecap="round" opacity=".8"/></svg></div><p class="vl">YOUR MATCH</p><h4>golden chanterelle</h4><p>blunt, forked false ridges. solid pale flesh. grows from soil.</p></div>
+<div class="vcard bad"><div class="vart"><svg viewBox="0 0 180 180" aria-hidden="true"><defs><linearGradient id="jkcap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF9A3C"/><stop offset="1" stop-color="#D2561B"/></linearGradient></defs><path d="M6 168c30-14 140-14 168 0v12H6z" fill="#3B2617"/><path d="M10 160c26-10 132-10 160 0" fill="none" stroke="#5A3A22" stroke-width="3"/><g><path d="M70 92 66 160h18l-4-68z" fill="#E77B2C"/><path d="M28 92c4-26 24-40 47-40s43 14 47 40c-12-6-28-8-47-8s-35 2-47 8z" fill="url(#jkcap)"/><path d="M34 90c14-4 26-5 41-5s27 1 41 5M40 92l30 6M52 90l20 8M98 90l-20 8M110 92l-30 6" fill="none" stroke="#9C3A10" stroke-width="1.3" opacity=".8"/></g><g transform="translate(70 22) scale(.7)"><path d="M70 92 66 160h18l-4-68z" fill="#E77B2C"/><path d="M28 92c4-26 24-40 47-40s43 14 47 40c-12-6-28-8-47-8s-35 2-47 8z" fill="url(#jkcap)"/><path d="M34 90c14-4 26-5 41-5s27 1 41 5" fill="none" stroke="#9C3A10" stroke-width="1.6" opacity=".8"/></g></svg></div><p class="vl">TOXIC LOOK-ALIKE</p><h4>jack-o'-lantern</h4><p>sharp, true gills. orange flesh. grows in clusters on wood.</p></div>
+<span class="vsbadge">vs</span>
+</div></div></section>
+
+<section class="sec" id="how">
+<div class="sec-head" data-reveal><p class="kick">04 · three steps</p><h2>crouch. <em>shoot.</em> read.</h2></div>
+<div class="how">
+<div class="hstep" data-reveal style="--d:0s"><span class="idx">01</span><span class="wire"></span><h3>photograph</h3><p>a top view, the underside and the stem, in daylight. more angles, steadier answers.</p></div>
+<div class="hstep" data-reveal style="--d:.15s"><span class="idx">02</span><span class="wire"></span><h3>compare</h3><p>spore reads the features, weighs the likely species and checks every dangerous look-alike.</p></div>
+<div class="hstep" data-reveal style="--d:.3s"><span class="idx">03</span><span class="wire"></span><h3>learn</h3><p>open the field guide, save the find to your field book, or ask a follow-up question.</p></div>
+</div></section>
+
+<section class="sec" id="policies">
+<div class="sec-head" data-reveal><p class="kick">05 · the paperwork · app store connect links</p><h2>clear, human, <em>linkable</em>.</h2></div>
+<div class="polgrid">
+<a class="polcard" data-reveal style="--d:0s" href="support.html"><i data-lucide="circle-help"></i><b>support</b><p>better photos, what the confidence means, subscriptions, restoring purchases and your data.</p><span class="go">support.html <span class="ic">→</span></span></a>
+<a class="polcard" data-reveal style="--d:.08s" href="safety.html"><i data-lucide="shield-check"></i><b>safety &amp; sources</b><p>why spore is never a reason to eat a wild mushroom, what to do in an emergency, and where the photos and data come from.</p><span class="go">safety.html <span class="ic">→</span></span></a>
+<a class="polcard" data-reveal style="--d:.16s" href="privacy.html"><i data-lucide="lock-keyhole"></i><b>privacy policy</b><p>what stays on your phone, what leaves it when you identify a photo, and who processes it.</p><span class="go">privacy.html <span class="ic">→</span></span></a>
+<a class="polcard" data-reveal style="--d:.24s" href="terms.html"><i data-lucide="scroll-text"></i><b>terms of use</b><p>the safety disclaimer, how subscriptions work, and the plain-language rules of the road.</p><span class="go">terms.html <span class="ic">→</span></span></a>
+</div></section>
+
+<footer class="sfoot"><p class="disc">spore helps you learn about mushrooms — it is not a safety test. never eat a wild mushroom based on an app; confirm with a qualified local expert. <a href="safety.html">safety &amp; sources</a>.</p>
+<div class="giant" aria-hidden="true">spore.</div>
+<a class="back" href="../index.html">← forged by tinkersmith<em>studio</em></a></footer>
+<script src="spore.js"></script></body></html>

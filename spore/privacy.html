@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>privacy policy — spore</title><meta name="description" content="How Spore handles your photos, field book and purchases: what stays on your device, what is sent to identify a mushroom, and who processes it."><meta name="theme-color" content="#060F0A">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,500&display=swap">
+<link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../sporeicon.css"><link rel="stylesheet" href="policy.css"></head>
+<body>
+<div class="topbar"><a href="index.html" class="app"><span class="sporeicon sm" aria-hidden="true"><svg viewBox="0 0 120 120"><g class="sp-shroom"><path class="sp-stem" d="M52 60c0 14-2 26-5 37 8 3 18 3 26 0-3-11-5-23-5-37z"/><path class="sp-cap" d="M24 62c0-22 16-36 36-36s36 14 36 36c-11-4-23-6-36-6s-25 2-36 6z"/></g></svg></span>← spore</a><span class="sep">/</span><span style="color:var(--text-secondary);font-size:var(--text-sm)">privacy</span><span class="more"><a href="support.html">support</a> <a href="safety.html">safety</a> <a href="terms.html">terms</a></span></div>
+<main class="doc">
+<p class="kick">spore — mushroom identifier &amp; field guide</p>
+<h1>privacy policy</h1>
+<p class="meta">effective october 1, 2026 · tinkersmithstudio</p>
+<div class="callout"><p><b>The short version:</b> your field book — saved finds, notes, history and settings — stays on your device. When you ask Spore to identify a mushroom, the photos you choose are sent through our service to Google's Gemini API to be analysed, and are not stored in our database. Spore has no account, no advertising and no third-party analytics, and it does not track you across other companies' apps or websites.</p></div>
+<h2>1. what stays on your device</h2>
+<ul><li>Your collection, saved species, identification history and small thumbnails of your scans</li><li>Notes you write and ratings you give</li><li>Settings such as text size, reduced motion and haptics</li><li>A cache of field-guide records and licensed photographs you have viewed</li></ul>
+<p>This information is stored as local app data. It is not uploaded to a Spore account or cloud database — there isn't one. Device backups may include app data according to your Apple backup settings.</p>
+<h2>2. identifying a mushroom</h2>
+<p>When you tap identify, Spore sends the photos you took or chose (up to four, resized on your device) and the current month to a Spore-operated HTTPS service. The service forwards them to <b>Google's Gemini API</b>, which analyses the images and returns the likely species and a field-guide profile. The answer is returned to your phone.</p>
+<p>Our application code does not write your photos or results to a database or file storage. It records technical information only — for example processing time, token counts and error codes — to keep the service running. Google processes the request under the <a href="https://ai.google.dev/gemini-api/terms">Gemini API Terms</a> and <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Our hosting provider, Vercel, processes connection data such as your IP address to deliver the request; see the <a href="https://vercel.com/legal/privacy-policy">Vercel Privacy Policy</a>.</p>
+<p>Please don't photograph people, faces, documents or anything private alongside a mushroom.</p>
+<h2>3. expert questions &amp; species search</h2>
+<p>If you ask the Expert a question or search for a species by description, Spore sends your question or search text — and, for the Expert, a short excerpt of the current conversation and the species you are viewing — through our service to the Gemini API to generate an answer. These texts are not stored in our database.</p>
+<p>To prevent abuse and enforce free daily limits, our service keeps short-lived usage counters keyed to a <b>one-way hash of your IP address</b>, never the address itself. Counters expire automatically within about a day. If you subscribe, Spore sends your Apple-signed subscription transaction so the service can confirm access; it is used for verification and per-minute limits that expire within minutes.</p>
+<h2>4. field-guide photos &amp; data</h2>
+<p>To show species information and photographs, Spore requests public records directly from the <a href="https://www.gbif.org/">Global Biodiversity Information Facility (GBIF)</a> and, through our service, from <a href="https://mushroomobserver.org/">Mushroom Observer</a>. These requests contain species names or record identifiers, not your photos or field book. Images are then loaded from the servers that host them, which receive your IP address as part of a normal web request. Spore only displays photographs whose licence allows reuse, with credit.</p>
+<h2>5. camera, photos &amp; location</h2>
+<ul><li><b>Camera and photo library</b> are used only when you choose to photograph or pick a mushroom.</li><li><b>Approximate location</b> (if you allow it) is used on your device for seasonal and regional context. It is not sent to our service, and Spore never asks for precise location.</li></ul>
+<h2>6. subscriptions &amp; purchases</h2>
+<p>Spore Premium is sold through Apple's App Store. Apple processes payment; we never receive your card details. Spore uses Apple's StoreKit on your device to load products, complete purchases and restores, and check whether premium access is active. See <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+<h2>7. advertising, analytics &amp; tracking</h2>
+<p>Spore contains no advertising SDK and no third-party analytics SDK. We do not sell your personal information or use it to track you across apps and websites owned by other companies.</p>
+<h2>8. your controls &amp; retention</h2>
+<ul><li>Delete any saved find, note or history entry at any time</li><li>Erase all Spore data on this device from Settings with one confirmed tap</li><li>Deleting the app deletes its local data</li></ul>
+<p>Because we don't keep your photos, questions or field book, there is no account data for us to export or delete. Service providers retain operational data according to their own policies and legal obligations.</p>
+<h2>9. children</h2>
+<p>Spore is not directed at children under 13, and we do not knowingly collect personal information from children under 13.</p>
+<h2>10. international processing</h2>
+<p>Our service and its providers may process requests in countries other than where you live. Their privacy policies describe the safeguards that apply.</p>
+<h2>11. changes</h2>
+<p>If this policy changes, the updated version will be posted here with a new effective date, and material changes will be noted in the app's release notes.</p>
+<h2>12. contact</h2>
+<p>Questions? <a href="mailto:tinkersmithstudio@gmail.com">tinkersmithstudio@gmail.com</a></p>
+<div class="docfoot"><span>spore · tinkersmithstudio</span><span>a guide, not a guarantee — never eat a wild mushroom on an app's word</span></div>
+</main></body></html>

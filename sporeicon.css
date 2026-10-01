@@ -1,0 +1,30 @@
+/* spore animated app icon — a little mushroom under scan brackets; it breathes and lets spores drift.
+   Forest system: moss #0B1A12, lichen glow #9BE3B0, cream cap #F4EAD5. */
+.sporeicon{position:relative;display:inline-flex;align-items:center;justify-content:center;background:radial-gradient(90% 70% at 50% 18%,#26503C,#0F2218 70%);border:1px solid rgba(155,227,176,.32);border-radius:24%;flex:none;animation:sp-glow 3.6s var(--ease-smooth) infinite alternate}
+.sporeicon svg{width:92%;height:92%;overflow:visible}
+.sporeicon.xl{width:128px;height:128px}
+.sporeicon.lg{width:88px;height:88px}
+.sporeicon.sm{width:38px;height:38px;border-width:1px}
+.sp-corner{fill:none;stroke:#9BE3B0;stroke-width:4;stroke-linecap:round;animation:sp-focus 4.8s var(--ease-strike) infinite}
+.sp-shroom{transform-origin:60px 98px;animation:sp-breathe 4.8s var(--ease-smooth) infinite}
+.sp-cap{fill:#F4EAD5}
+.sp-capshade{fill:#E3C99A}
+.sp-dot{fill:#D9B47A}
+.sp-gills{fill:none;stroke:#C7A46C;stroke-width:2;stroke-linecap:round}
+.sp-stem{fill:#EFE3CB}
+.sp-ground{fill:rgba(155,227,176,.18)}
+.sp-spore{fill:#C9FFD9;opacity:0;animation:sp-drift 3.6s ease-out infinite}
+.sp-spore.s2{animation-delay:1.2s}.sp-spore.s3{animation-delay:2.4s}.sp-spore.s4{animation-delay:.6s}
+.sp-scan{opacity:0;animation:sp-beam 4.8s var(--ease-smooth) infinite}
+.sp-spark{position:absolute;top:-9%;right:-9%;font-style:normal;color:#C9FFD9;text-shadow:0 0 12px rgba(155,227,176,.95);animation:sp-twinkle 2.2s ease-in-out infinite;line-height:1}
+.sporeicon.xl .sp-spark{font-size:26px}
+.sporeicon.lg .sp-spark{font-size:18px}
+.sporeicon.sm .sp-spark{font-size:10px}
+@keyframes sp-glow{from{box-shadow:0 0 24px -8px rgba(155,227,176,.35),inset 0 0 18px rgba(155,227,176,.06)}to{box-shadow:0 0 46px -4px rgba(155,227,176,.6),inset 0 0 28px rgba(155,227,176,.14)}}
+@keyframes sp-breathe{0%,100%{transform:none}50%{transform:scale(1.03,.985)}}
+@keyframes sp-focus{0%,8%{opacity:.25;transform:scale(1.12)}18%,82%{opacity:.95;transform:none}100%{opacity:.25;transform:scale(1.12)}}
+.sp-corner{transform-origin:60px 60px}
+@keyframes sp-beam{0%,20%{opacity:0;transform:translateY(-46px)}28%{opacity:.9}52%{opacity:.9}60%,100%{opacity:0;transform:translateY(46px)}}
+@keyframes sp-drift{0%{opacity:0;transform:translate(0,0)}15%{opacity:.95}100%{opacity:0;transform:translate(var(--dx,6px),-34px)}}
+@keyframes sp-twinkle{0%,100%{opacity:.45;transform:scale(.82) rotate(-8deg)}50%{opacity:1;transform:scale(1.15) rotate(8deg)}}
+@media (prefers-reduced-motion:reduce){.sporeicon,.sp-corner,.sp-shroom,.sp-spore,.sp-scan,.sp-spark{animation:none!important}.sp-corner{opacity:.95}}
